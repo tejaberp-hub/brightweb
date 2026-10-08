@@ -1,0 +1,72 @@
+<section id="pricing" class="section section-alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-badge">OUR PRICING</span>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">
+        Choose a plan that fits your business needs. No hidden costs.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      @for (plan of pricingPlans; track plan.id) {
+        <article class="pricing-card reveal" [class.popular]="plan.isPopular">
+          @if (plan.badge) {
+            <div class="popular-badge">{{ plan.badge }}</div>
+          }
+
+          <div class="plan-icon-wrapper" [style.backgroundColor]="plan.iconBgColor">
+            @if (plan.icon === 'diamond') {
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#067a46" stroke-width="2">
+                <polygon points="12 2 2 7 12 22 22 7 12 2"></polygon>
+                <polyline points="2 7 12 12 22 7"></polyline>
+              </svg>
+            }
+            @if (plan.icon === 'crown') {
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#067a46" stroke-width="2">
+                <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path>
+              </svg>
+            }
+            @if (plan.icon === 'gem') {
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2">
+                <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+                <line x1="12" y1="22" x2="12" y2="9"></line>
+              </svg>
+            }
+          </div>
+
+          <div class="plan-header">
+            <h3 class="plan-name">{{ plan.name }}</h3>
+            <p class="plan-desc">{{ plan.description }}</p>
+          </div>
+
+          <div class="plan-price-box">
+            <span class="price">{{ plan.price }}</span>
+          </div>
+
+          <ul class="feature-list">
+            @for (feat of plan.features; track feat) {
+              <li>
+                <svg class="check-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#067a46" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>{{ feat }}</span>
+              </li>
+            }
+          </ul>
+
+          <div class="plan-cta-wrapper">
+            <a
+              href="#contact"
+              class="btn"
+              [class.btn-primary]="plan.isPopular"
+              [class.btn-outline-green]="!plan.isPopular"
+              (click)="scrollToContact($event)">
+              {{ plan.ctaText }}
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

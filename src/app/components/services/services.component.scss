@@ -1,0 +1,81 @@
+:host {
+  display: block;
+}
+
+.section.section-alt {
+  background: #f3f8f4;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 18px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.045);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  min-height: 248px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+
+    .btn-arrow {
+      background-color: var(--primary);
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+  }
+}
+
+.service-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+}
+
+.service-desc {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.service-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,124 @@
+.final-cta-section {
+  padding: 40px 0 96px;
+  background: #ffffff;
+}
+
+.cta-banner {
+  background: linear-gradient(120deg, #eef7f1 0%, #e8f4ec 40%, #f4faf6 100%);
+  border-radius: 28px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  align-items: end;
+  gap: 28px;
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  box-shadow: 0 10px 32px rgba(6, 122, 70, 0.08);
+}
+
+.cta-leaf {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(6, 122, 70, 0.1);
+  pointer-events: none;
+}
+
+.cta-leaf-1 {
+  width: 160px;
+  height: 160px;
+  right: -40px;
+  top: -50px;
+}
+
+.cta-leaf-2 {
+  width: 100px;
+  height: 100px;
+  right: 80px;
+  bottom: -40px;
+  background: rgba(6, 122, 70, 0.07);
+}
+
+.cta-person-visual {
+  height: 220px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+
+  img {
+    height: 100%;
+    width: 200px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 18px 18px 0 0;
+  }
+}
+
+.cta-content {
+  padding: 44px 0;
+  align-self: center;
+  position: relative;
+  z-index: 1;
+
+  .cta-title {
+    font-size: clamp(1.7rem, 2.4vw, 2.15rem);
+    font-weight: 800;
+    color: var(--navy);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+
+  .cta-subtitle {
+    font-size: 1.02rem;
+    color: var(--text-muted);
+    max-width: 400px;
+    line-height: 1.6;
+  }
+}
+
+.cta-action {
+  align-self: center;
+  padding: 44px 0;
+  position: relative;
+  z-index: 1;
+
+  .cta-button {
+    padding: 15px 28px;
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .cta-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 32px 22px;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .cta-person-visual {
+    justify-content: center;
+    height: 180px;
+
+    img {
+      width: 150px;
+      border-radius: 16px;
+    }
+  }
+
+  .cta-content,
+  .cta-action {
+    padding: 0;
+  }
+
+  .cta-content .cta-subtitle {
+    margin: 0 auto;
+  }
+
+  .cta-action {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,40 @@
+<section id="portfolio" class="section">
+  <div class="container">
+    <div class="portfolio-top-bar reveal">
+      <div class="portfolio-header-text">
+        <span class="section-badge">OUR PORTFOLIO</span>
+        <h2 class="section-title">Websites We've Built</h2>
+        <p class="section-subtitle">
+          Take a look at some of the businesses we've helped get online.
+        </p>
+      </div>
+
+      <a href="#contact" class="btn btn-outline-green view-all-btn" (click)="scrollToContact($event)">
+        View All Projects →
+      </a>
+    </div>
+
+    <div class="portfolio-grid">
+      @for (item of portfolioItems; track item.id) {
+        <article class="portfolio-card reveal" (click)="scrollToContact($event)" tabindex="0" role="button">
+          <div class="portfolio-img-wrapper">
+            <img [src]="item.image" [alt]="item.title" loading="lazy" />
+          </div>
+
+          <div class="portfolio-info">
+            <div>
+              <h3 class="portfolio-title">{{ item.title }}</h3>
+              <span class="portfolio-category">{{ item.categoryLabel }}</span>
+            </div>
+            <span class="btn-arrow" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

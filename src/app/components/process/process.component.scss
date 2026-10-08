@@ -1,0 +1,125 @@
+.process-section {
+  background: #ffffff;
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  padding-top: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-curve {
+  position: absolute;
+  top: 34px;
+  left: 8%;
+  width: 84%;
+  height: 80px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-icon-wrapper {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.step-number {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.72rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.step-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 210px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .timeline-curve {
+    display: none;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    gap: 0;
+    padding-left: 16px;
+    border-left: 2px dashed #d1d5db;
+  }
+
+  .step-card {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
+    padding: 0 0 32px 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 24px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--primary-soft);
+    }
+  }
+
+  .step-icon-wrapper {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+  }
+
+  .step-desc {
+    margin: 0;
+  }
+}

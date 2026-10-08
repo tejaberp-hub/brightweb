@@ -1,0 +1,88 @@
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 36px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  border-top: 2px dashed #cbd5e1;
+  z-index: 0;
+}
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step-icon-wrapper {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.step-icon-wrapper .step-number {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--border-light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.step-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+@media (max-width: 992px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .process-timeline {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

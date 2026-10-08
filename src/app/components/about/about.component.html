@@ -1,0 +1,44 @@
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="about-grid reveal">
+      <div class="about-content">
+        <span class="section-badge">ABOUT BRIGHTWEB</span>
+        <h2 class="section-title">Helping Small Businesses Build Their Online Presence</h2>
+
+        <p class="about-text">
+          BRIGHTWEB creates modern, affordable websites for small businesses, freelancers and local service providers.
+          Our focus is simple: professional websites, clear pricing and real business growth — without unnecessary complexity.
+        </p>
+
+        <div class="highlights-grid">
+          @for (item of highlights; track item.title) {
+            <div class="highlight-item">
+              <div class="check-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#008744" stroke-width="3">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="highlight-title">{{ item.title }}</h3>
+                <p class="highlight-desc">{{ item.desc }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-card">
+          <img
+            src="assets/images/cta/business-owner.jpg"
+            alt="Business professional representing BRIGHTWEB clients"
+          />
+          <div class="about-caption">
+            <strong>Professional websites.</strong>
+            <span>Simple pricing. Real business growth.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
