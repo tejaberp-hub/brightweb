@@ -2,16 +2,18 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand-col" id="about">
-        <a href="#home" class="footer-logo" (click)="scrollToSection('home', $event)">
-          <span class="logo-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="9.5" r="6.2" fill="#ffffff"/>
-              <circle cx="9.8" cy="20.5" r="6.2" fill="#ffffff"/>
-              <circle cx="22.2" cy="20.5" r="6.2" fill="#ffffff"/>
-              <circle cx="16" cy="16" r="3.2" fill="#111916"/>
-            </svg>
-          </span>
-          <span class="logo-text">BRIGHTWEB</span>
+        <a
+          href="#home"
+          class="footer-logo"
+          (click)="scrollToSection('home', $event)"
+          [attr.aria-label]="siteConfig.brandName">
+          <img
+            class="footer-logo-img"
+            [src]="siteConfig.logos.full"
+            [alt]="siteConfig.brandName + ' — ' + siteConfig.tagline"
+            width="220"
+            height="140"
+          />
         </a>
 
         <p class="brand-tagline">
@@ -101,7 +103,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 BRIGHTWEB. All rights reserved.</p>
+      <p>© 2026 T-BRIGHTWEB. All rights reserved.</p>
       <div class="footer-legal">
         <a href="#contact">Privacy Policy</a>
         <span>|</span>

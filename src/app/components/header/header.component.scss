@@ -29,15 +29,25 @@
   gap: 10px;
   flex-shrink: 0;
 
-  .logo-icon {
-    display: flex;
+  .logo-mark {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    flex-shrink: 0;
   }
 
   .logo-text {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    color: var(--navy);
+    color: #0b3d24;
     letter-spacing: -0.02em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .logo-text-accent {
+    color: #4caf50;
   }
 }
 
@@ -209,5 +219,22 @@
 
   .header-actions .cta-btn {
     display: none;
+  }
+
+  .logo {
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+    }
+
+    .logo-text {
+      font-size: 1.05rem;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .logo .logo-text {
+    font-size: 0.95rem;
   }
 }

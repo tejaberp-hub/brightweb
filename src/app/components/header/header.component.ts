@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { siteConfig } from '../../core/config/site.config';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
+  siteConfig = siteConfig;
   isScrolled = false;
   isMobileMenuOpen = false;
   activeSection = 'home';
