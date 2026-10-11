@@ -27,7 +27,7 @@ export const PRICING_DATA: PricingPlan[] = [
     iconBgColor: '#e7f6ee',
     features: [
       'Responsive Website (up to 10 pages)',
-      'Contact Form + WhatsApp',
+      'Contact Form',
       'SEO Basic Setup',
       'Google Maps Integration',
       '3 Months Support'
